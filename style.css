@@ -1,0 +1,23 @@
+.article-header {
+  height: 300vh;
+  width: 100%;
+  background-color: black;
+}
+
+.scroll-watcher {
+  position: fixed;
+  height: 10px;
+  top: 0;
+  z-index: 1000;
+  background-color: lime;
+  width: 100%;
+  scale: 0 1;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
