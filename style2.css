@@ -1,3 +1,9 @@
+/* This is for making a scrolling in the x-direction  */
+
+body {
+    width: 200vw;
+}
+
 .article-header {
   height: 300vh;
   width: 100%;
@@ -13,7 +19,8 @@
   width: 100%;
   scale: 0 1;
   animation: scroll-watcher linear;
-  animation-timeline: scroll();
+  /* Setting scroll to x will watch for scrolling in x-direction */
+  animation-timeline: scroll(x);
   transform-origin: left;
 }
 
