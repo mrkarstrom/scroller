@@ -1,7 +1,40 @@
-.article-header {
+html,
+body {
+  margin: 0;
+  padding: 0;
   height: 300vh;
+}
+
+.content-grid {
   width: 100%;
-  background-color: black;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+p {
+  padding: 10px;
+}
+
+header .article-header {
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 100svh;
+  overflow-x: clip;
+  padding-block: 7rem;
+  margin-block-end: 3rem;
+}
+
+.header-image {
+  grid-column: 1 / -1 !important;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .scroll-watcher {
@@ -17,8 +50,21 @@
   transform-origin: left;
 }
 
-@keyframes scroll-watcher {
+article > img {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+  animation: fade-in linear;
+  animation-timeline: view(100px 500px);
+}
+
+@keyframes fade-in {
+  from {
+    scale: 0.8;
+    opacity: 0;
+  }
   to {
-    scale: 1 1;
+    scale: 1;
+    opacity: 1;
   }
 }
